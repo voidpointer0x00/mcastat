@@ -63,8 +63,8 @@ rm corr.tmp
 ```
 
 But now let's find region size to chunks number correlation, and then it's
-average. I got `1,759,815.0031358` bytes per chunk on average, which really
-came close to the real size of `1,800,480` bytes.
+average. I got `6.159660494` bytes per chunk on average -> `1,759,815.0031358`
+bytes in total, which really came close to the real size of `1,800,480` bytes.
 ```bash
 for file in region/*.mca; do
   size=$(du $file | awk '{print $1}')
