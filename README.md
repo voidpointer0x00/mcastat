@@ -76,7 +76,7 @@ rm size_corr.tmp
 ```
 
 
-[^1] I'm not going to build it on Windows or any other platform, so I cannot
+[^1]: I'm not going to build it on Windows or any other platform, so I cannot
 confirm that it works on any OS other than Linux. Even though the code does
 not use any Linux exclusive API, the path to a file depends on the system
 and, for example, using `~` with `mcastat` will transform into user's home
