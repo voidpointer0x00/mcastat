@@ -16,7 +16,7 @@ extern struct mcastat_state {
 
 /**
  * mcastat reads the given .mca file and displays
- *  status based on selected mcastat_mode mcastat_flags.
+ *  status based on selected mcastat_state.flags.
  */
 int mcastat();
 
