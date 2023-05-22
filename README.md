@@ -25,6 +25,17 @@ sudo cp mcastat /usr/local/bin/
 make clean
 ```
 
+## Gathered statistics
+
+Using this tool, I calculated that an average chunk in a nether world _(seed 3625364)_
+of 285 700 chunks would weight `6.159660494` KiB.
+
+And an average chunk in an overworld _(seed 6416191033863448866)_ of 1 620 529 chunks
+weights `10.6779` KiB. 
+
+_All the data was gathered on a newly generated chunks, the data may and will slightly
+differ if you have players building lots of stuff._
+
 ## Usage
 
 The most simple command would be
@@ -75,6 +86,11 @@ gcalccmd $(awk '{s+=$1} END {print s}' < size_corr.tmp)/$(wc -l < size_corr.tmp)
 rm size_corr.tmp
 ```
 
+For an overworld I simply ran the first described command to get the total number
+of all the chunks within the world and then simply divided the total weight of the
+world tht I got using `du --max-depth=0 -bc world/region/` command by that chunks
+total number. `17 719 164 928 bytes / 1 620 529 chunks` = `10934.18564431738`
+bytes or `10.6779` KiB.
 
 [^1]: I'm not going to build it on Windows or any other platform, so I cannot
 confirm that it works on any OS other than Linux. Even though the code does
